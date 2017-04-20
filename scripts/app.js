@@ -90,14 +90,28 @@ $(window).on("load", function() {
    students.forEach(function(student) {
       openInfo(student);
 
-      $("#" + student).on("mouseenter", function() {
-         $("#" + student + " img:first-child").addClass("dn");
-         $("#" + student + " img:nth-child(2)").removeClass("dn");
-      });
+      if (!(('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch)) {
+         $("#" + student).on("mouseenter", function() {
+            $("#" + student + " img:first-child").addClass("dn");
+            $("#" + student + " img:nth-child(2)").removeClass("dn");
+         });
 
-      $("#" + student).on("mouseleave", function() {
-         $("#" + student + " img:first-child").removeClass("dn");
-         $("#" + student + " img:nth-child(2)").addClass("dn");
-      });
+         $("#" + student).on("mouseleave", function() {
+            $("#" + student + " img:first-child").removeClass("dn");
+            $("#" + student + " img:nth-child(2)").addClass("dn");
+         });
+      }
+
+      // if(!!('ontouchstart' in window)) {
+         // $("#" + student).on("mouseenter", function() {
+         //    $("#" + student + " img:first-child").addClass("dn");
+         //    $("#" + student + " img:nth-child(2)").removeClass("dn");
+         // });
+         //
+         // $("#" + student).on("mouseleave", function() {
+         //    $("#" + student + " img:first-child").removeClass("dn");
+         //    $("#" + student + " img:nth-child(2)").addClass("dn");
+         // });
+      // }
    });
 })
