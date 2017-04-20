@@ -101,17 +101,5 @@ $(window).on("load", function() {
             $("#" + student + " img:nth-child(2)").addClass("dn");
          });
       }
-
-      // if(!!('ontouchstart' in window)) {
-         // $("#" + student).on("mouseenter", function() {
-         //    $("#" + student + " img:first-child").addClass("dn");
-         //    $("#" + student + " img:nth-child(2)").removeClass("dn");
-         // });
-         //
-         // $("#" + student).on("mouseleave", function() {
-         //    $("#" + student + " img:first-child").removeClass("dn");
-         //    $("#" + student + " img:nth-child(2)").addClass("dn");
-         // });
-      // }
    });
 })
