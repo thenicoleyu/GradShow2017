@@ -1984,7 +1984,6 @@ code, .code { font-family: Consolas, monaco, monospace; }
 /* Uncomment out the line below to help debug layout issues */
 /* @import './_debug'; */
 @media screen and (min-width: 30em) {
-.left-ns { margin-right: auto;  }
  .aspect-ratio-ns { height: 0; position: relative; }
  .aspect-ratio--16x9-ns { padding-bottom: 56.25%; }
  .aspect-ratio--9x16-ns { padding-bottom: 177.77%; }
@@ -2814,6 +2813,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .v-btm-m { vertical-align: bottom; }
 }
 @media screen and (min-width: 60em) {
+   .left-l { margin-right: auto;  }
  .aspect-ratio-l { height: 0; position: relative; }
  .aspect-ratio--16x9-l { padding-bottom: 56.25%; }
  .aspect-ratio--9x16-l { padding-bottom: 177.77%; }
