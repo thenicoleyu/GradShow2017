@@ -2007,7 +2007,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .bg-left-ns { background-repeat: no-repeat; background-position: center left; }
  .outline-ns { outline: 1px solid; }
  .outline-transparent-ns { outline: 1px solid transparent; }
- .outline-0-ns { outline: 0; }
+ .outline-0-ns { outline: none!important; }
  .ba-ns { border-style: solid; border-width: 1px; }
  .bt-ns { border-top-style: solid; border-top-width: 1px; }
  .br-ns { border-right-style: solid; border-right-width: 1px; }

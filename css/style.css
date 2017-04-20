@@ -30,7 +30,3 @@ canvas {
    left: 50%;
    transform: translate(-50%, -50%);
 }
-
-.bottom-20vh {
-   bottom: 30vh;
-}
