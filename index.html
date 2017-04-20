@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" class="vh-100 flex">
+<head>
+   <title></title>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+   <title>
+      Sheridan IMM | 2017 Grad Show
+   </title>
+   <meta name="author" content="">
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <script src="bower_components/three.js/build/three.min.js"></script>
+
+   <script src="bower_components/aquarelle/Aquarelle.js"></script>
+
+   <script src="bower_components/three.js/examples/js/postprocessing/EffectComposer.js"></script>
+
+   <script src="bower_components/three.js/examples/js/postprocessing/ClearPass.js"></script>
+   <script src="bower_components/aquarelle/AquarellePass.js"></script>
+   <script src="bower_components/three.js/examples/js/postprocessing/ShaderPass.js"></script>
+   <script src="bower_components/three.js/examples/js/shaders/CopyShader.js"></script>
+
+   <script src="https://bl.ocks.org/mbostock/raw/4241134/d3.geom.contour.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="scripts/students.js"></script>
+   <script src="scripts/app.js"></script>
+
+   <link rel="stylesheet" href="css/tachyons.css">
+   <link rel="stylesheet" href="css/style.css">
+
+   <script src="https://use.fontawesome.com/d60a4509c0.js"></script>
+</head>
+<body class="relative w-100 bg-white near-black avenir-next f5 overflow-x-hidden">
+   <div class="overflow-x-hidden">
+      <header class="relative vh-100">
+         <div class="fade o-0">
+            <img src="img/splash.png" class="dn">
+
+            <div class="social-media absolute left-50-s right-3-ns top-3">
+               <a href="https://www.facebook.com/sheridanIMM/" class="link">
+                  <i class="fa fa-facebook fa-lg fa-fw near-black link hover-red" aria-hidden="true"></i>
+               </a>
+               <a href="https://twitter.com/SheridanIMM" class="link">
+                  <i class="fa fa-twitter fa-lg fa-fw near-black pl2 link hover-red" aria-hidden="true"></i>
+               </a>
+               <a href="https://www.instagram.com/sheridanimm/" class="link">
+                  <i class="fa fa-instagram fa-lg fa-fw near-black pl2 link hover-red" aria-hidden="true"></i>
+               </a>
+               <a href="https://www.pinterest.com/sheridanimm/" class="link">
+                  <i class="fa fa-pinterest fa-lg fa-fw near-black pl2 link hover-red" aria-hidden="true"></i>
+               </a>
+            </div>
+
+            <div class="tc absolute absolute-center w-100">
+               <img src="img/logo.svg" class="w4" id="logo" />
+               <h1 class="title f4 f2-ns fw1 tracked-mega mt4 mb1">IMMERSE YOURSELF</h1>
+               <h2 class="subtitle f6 f5-ns tracked">Sheridan IMM 2017 Grad Show</h2>
+               <div class="mt5 mb2 f6 f5-ns">
+                  <div class="date mb1">May 3rd, 2017</div>
+                  <div class="date">6 - 9 pm</div>
+               </div>
+            </div>
+            <a href="#students" class="absolute bottom-2 left-50" id="arrow">
+               <img src="img/arrowdown.svg" class="w2" />
+            </a>
+         </div>
+      </header>
+      <main class="bg-near-white pt5" id="students">
+         <h1 class="mt5-ns ttu tc f4 f3-ns tracked b">Our Students</h1>
+         <div class="mt4 center w3 ba bw1 b--red"></div>
+
+         <!-- student info -->
+         <div class="fixed absolute-center bg-white ba b--light-gray ph4 pt5 z-5 br2 flex-wrap justify-center w-90 w-60-ns vh-75 vh-60-ns dn" id="student-box">
+            <div class="absolute top-1 right-1 w1 h1 pointer" id="close">
+               <img src="img/close.svg" />
+            </div>
+            <div class="w-100 w-50-ns tc">
+               <img src="" class="w-50 w-70-ns br-100 ba bw2 b--light-gray student" id="student-img" />
+            </div>
+            <div class="w-100 w-50-ns nt5 mt0-ns tc tl-ns">
+               <h1 class="f3 mb0" id="student-name">
+
+               </h1>
+               <h2 class="f5 mt2" id="student-title">
+
+               </h2>
+               <div class="mt3 center left-ns ml0-ns w3 ba bw1 b--red"></div>
+               <div class="f6 f5-ns mt4" id="student-quote">
+
+               </div>
+               <div class="mt4">
+                  <a href="" class="link" id="student-linkedin">
+                     <i class="fa fa-linkedin fa-2x mr2 fa-fw dark-gray link hover-red" aria-hidden="true"></i>
+                  </a>
+                  <a href="" class="link" id="student-github">
+                     <i class="fa fa-github fa-2x mh2 fa-fw dark-gray link hover-red" aria-hidden="true"></i>
+                  </a>
+                  <a href="" class="link" id="student-twitter">
+                     <i class="fa fa-twitter fa-2x mh2 fa-fw dark-gray link hover-red" aria-hidden="true"></i>
+                  </a>
+               </div>
+               <div class="mt4">
+                  <a href="" class="link white bg-red pv2 ph4 br1" target="_blank" id="student-portfolio">
+                     View Portfolio
+                  </a>
+               </div>
+            </div>
+         </div>
+         <div class="w-100 vh-100 bg-black-70 fixed absolute-center z-4 dn" id="student-dim">
+         </div>
+
+         <!-- students -->
+         <div class="pa2 mt4 flex flex-wrap justify-center w-90 center">
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="laura">
+               <img src="img/students/laura1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/laura2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn dn" />
+               <h2 class="f4 mb1">Laura Warr</h2>
+               <h3 class="f6 mt0">Full Stack Developer</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="nicole">
+               <img src="img/students/nicole1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/nicole2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Nicole Yu</h2>
+               <h3 class="f6 mt0">UI/UX & Front-End Developer</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="paul">
+               <img src="img/students/paul1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/paul2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Paul Spry</h2>
+               <h3 class="f6 mt0">UI/UX Specialist</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="julien">
+               <img src="img/students/julien1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/julien2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Julien Lapointe</h2>
+               <h3 class="f6 mt0">Full Stack Developer</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="ali">
+               <img src="img/students/ali1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/ali2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Humayun (Ali) Ahmed</h2>
+               <h3 class="f6 mt0">UX, Front-End & Interactive Designer</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="elaine">
+               <img src="img/students/elaine1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/elaine2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Elaine Tran</h2>
+               <h3 class="f6 mt0">UI/UX, Front-End & Interactive Designer</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="amnon">
+               <img src="img/students/amnon1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/amnon2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Amnon Skladman</h2>
+               <h3 class="f6 mt0">UI/UX, Front-End & Interactive Designer</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="chibuzo">
+               <img src="img/students/chibuzo1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/chibuzo2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Chibuzo Uguru</h2>
+               <h3 class="f6 mt0">Front-End Developer</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="madzia">
+               <img src="img/students/madzia1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/madzia2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Madzia McCutcheon</h2>
+               <h3 class="f6 mt0">UI/UX Designer</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="natasha">
+               <img src="img/students/natasha1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/natasha2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Natasha Sidi</h2>
+               <h3 class="f6 mt0">Marketing/Social Media Specialist</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="natalia">
+               <img src="img/students/natalia1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/natalia2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Natalia Camarena</h2>
+               <h3 class="f6 mt0">UI/UX Designer</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="ben">
+               <img src="img/students/ben1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/ben2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Ben Leger</h2>
+               <h3 class="f6 mt0">Multimedia & Front-End Developer</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="christy">
+               <img src="img/students/christy1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/christy2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Sitong Wang</h2>
+               <h3 class="f6 mt0">UI/UX, Interactive & Graphic Designer</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="lauren">
+               <img src="img/students/lauren1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/lauren2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Lauren Harvey</h2>
+               <h3 class="f6 mt0">Project Manager & Interactive Designer</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="lulu">
+               <img src="img/students/lulu1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/lulu2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Lulu Kang</h2>
+               <h3 class="f6 mt0">UI/UX, Front-End & Graphic Designer</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="daisy">
+               <img src="img/students/daisy1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/daisy2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Daisy Shen</h2>
+               <h3 class="f6 mt0">UX/UI & Front-End Developer</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="meagan">
+               <img src="img/students/meagan1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/meagan2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Meagan Peat</h2>
+               <h3 class="f6 mt0">UI/UX Designer</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="mengsi">
+               <img src="img/students/mengsi1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/mengsi2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Mengsi Gong</h2>
+               <h3 class="f6 mt0">UI/UX Specialist</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="ziqin">
+               <img src="img/students/ziqin1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/ziqin2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Ziqin Gao</h2>
+               <h3 class="f6 mt0">UI/UX, Front-End & Graphic Designer</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="gustavo">
+               <img src="img/students/gustavo1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/gustavo2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Gustavo Costa</h2>
+               <h3 class="f6 mt0">UX, Front-End & Interactive Designer</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="linus">
+               <img src="img/students/linus1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/linus2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Linus Wang</h2>
+               <h3 class="f6 mt0">Front-End Developer</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="rachel">
+               <img src="img/students/rachel1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/rachel2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Rachel Han</h2>
+               <h3 class="f6 mt0">UI/UX, Front-End & Interactive Designer</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="priyanka">
+               <img src="img/students/priyanka1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/priyanka2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Priyanka Panjwani</h2>
+               <h3 class="f6 mt0">UI/UX, Front-End & Interactive Designer</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="nick">
+               <img src="img/students/nick1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/nick2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Nico Abais</h2>
+               <h3 class="f6 mt0">UI/UX, Interactive & Graphic Designer</h3>
+            </div>
+            <div class="w-60 w-33-m w-25-l mv3 mt3-ns mb4-ns pointer tc" id="vladan">
+               <img src="img/students/vladan1.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student" />
+               <img src="img/students/vladan2.jpg" class="w-100 w-80-ns br-100 ba bw2 b--light-gray student dn" />
+               <h2 class="f4 mb1">Vladan Mutabdzija</h2>
+               <h3 class="f6 mt0">UI/UX & Interactive Designer</h3>
+            </div>
+         </div> <!-- end students -->
+
+         <!-- location -->
+         <div class="mt5 pt5 pb4 bg-white tc">
+            <h1 class="mt5-ns ttu tracked f4 f3-ns tc b">Location</h1>
+            <div class="mt4 center w3 ba bw1 b--red"></div>
+            <div class="mt5">
+               <p class="mb2">
+                  May 3rd, 2017
+               </p>
+               <p class="mt1">
+                  6 - 9 pm
+               </p>
+            </div>
+            <img src="img/rangle.png" class="w4 mt3" />
+            <div class="mt3 mb5">
+               <p class="mb2">
+                  129 Spadina Ave #500
+               </p>
+               <p class="mt1">
+                  Toronto, ON, M5V 2L3
+               </p>
+            </div>
+            <div class="h6 w-100 w-80-m w-70-l center" id="map"></div>
+         </div>
+      </main>
+      <footer class="bg-near-black flex flex-wrap justify-between content-center ph2 ph4-m ph5-l pt3 pb4">
+         <img src="img/sheridan.png" class="h-100 w4" />
+         <div class="mt2">
+            <a href="https://www.facebook.com/sheridanIMM/" class="link">
+               <i class="fa fa-facebook fa-lg fa-fw white link hover-red" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com/SheridanIMM" class="link">
+               <i class="fa fa-twitter fa-lg fa-fw white pl2 link hover-red" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/sheridanimm/" class="link">
+               <i class="fa fa-instagram fa-lg fa-fw white pl2 link hover-red" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.pinterest.com/sheridanimm/" class="link">
+               <i class="fa fa-pinterest fa-lg fa-fw white pl2 link hover-red" aria-hidden="true"></i>
+            </a>
+         </div>
+      </footer>
+      <script>
+      function initMap() {
+         var uluru = {lat: 43.6474784, lng: -79.39537789999997};
+         var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: uluru
+         });
+         var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+         });
+         var contentString =
+         '<div id="content">'+
+         '<img src="img/rangle.png" class="w4 mt2" />'+
+         '<div id="bodyContent">'+
+         '<p class="mb0">129 Spadina Ave, Unit #500</p>'+
+         '<p class="mt0">Toronto, ON, M5V 2L3</p>'+
+         '<p>6 - 9 pm</p>'+
+         '</div>'+
+         '</div>';
+
+         var infowindow = new google.maps.InfoWindow({
+            content: contentString
+         });
+         marker.addListener('click', function() {
+            infowindow.open(map, marker);
+         });
+      }
+      </script>
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANSHEZis7k65a3oWVeRiWmnrGaiSmCEbg&callback=initMap">
+      </script>
+   </div>
+</body>
+</html>

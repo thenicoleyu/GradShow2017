@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('../fonts/AvenirNext.ttf');
+}
+
+.avenir-next { font-family: "AvenirNext", sans-serif; }
+
+canvas {
+    left: 50%;
+    max-height: 120%;
+    max-width: 120%;
+    position: absolute;
+    top: 40%;
+}
+
+.left-50 {
+   left: 50%;
+   transform: translate(-50%);
+}
+
+@media screen and (max-width: 30em) {
+   .left-50-s {
+      left: 50%;
+      transform: translate(-50%);
+   }
+}
+
+.absolute-center {
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.bottom-20vh {
+   bottom: 30vh;
+}
