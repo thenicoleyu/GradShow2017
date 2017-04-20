@@ -47,6 +47,18 @@ $(window).on("load", function() {
       });
    });
 
+   $("a").on("click", function(event){
+      if (this.hash !== "") {
+         event.preventDefault();
+
+         var hash = this.hash;
+         $("html, body").animate({
+            scrollTop: $( $.attr(this, "href") ).offset().top
+         }, 500);
+         window.location.hash = hash;
+      }
+   });
+
    $(".student").on("click", function() {
       console.log("clicky student");
 
@@ -58,16 +70,6 @@ $(window).on("load", function() {
       $("#student-box").addClass("dn").removeClass("flex");
       $("#student-dim").addClass("dn");
    });
-
-   // $("#laura").on("click", function() {
-   //    $("#student-img").attr("src", "img/students/laura2.jpg");
-   //    $("#student-name").html(studentName["laura"]);
-   //    $("#student-title").html(studentTitle["laura"]);
-   //    $("#student-quote").html(studentQuote["laura"]);
-   //    $("#student-linkedin").attr("href", studentLinkedin["laura"]);
-   //    $("#student-github").attr("href", studentGithub["laura"]);
-   //    $("#student-twitter").attr("href", studentTwitter["laura"]);
-   // });
 
    function openInfo(student) {
       $("#" + student).on("click", function() {
@@ -82,26 +84,11 @@ $(window).on("load", function() {
       });
    };
 
-   // function changeImg(student) {
-   //    $(".student").on("hover", function() {
-   //       $("#" + student " img").attr("src", "img/students/" + student + "2.jpg");
-   //    });
-   // }
-
    var students = ["ali", "amnon", "ben", "chibuzo", "christy", "daisy", "elaine", "gustavo", "julien", "laura", "lauren", "linus", "lulu", "madzia", "meagan", "mengsi", "natalia", "natasha", "nick",
    "nicole", "paul", "priyanka", "rachel", "vladan", "ziqin"];
 
    students.forEach(function(student) {
       openInfo(student);
-      // changeImg(student);
-
-      // $("#" + student).on("mouseenter", function() {
-      //    $("#" + student + " img").attr("src", "img/students/" + student + "2.jpg");
-      // });
-      //
-      // $("#" + student).on("mouseleave", function() {
-      //    $("#" + student + " img").attr("src", "img/students/" + student + "1.jpg");
-      // });
 
       $("#" + student).on("mouseenter", function() {
          $("#" + student + " img:first-child").addClass("dn");
