@@ -18,15 +18,17 @@ canvas {
    transform: translate(-50%);
 }
 
-@media screen and (max-width: 30em) {
-   .left-50-s {
-      left: 50%;
-      transform: translate(-50%);
-   }
-}
-
 .absolute-center {
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
+}
+
+.scale-norm {
+   transform: scale(1);
+   transition: transform .3s;
+}
+
+.scale-up {
+   transform: scale(1.2);
 }

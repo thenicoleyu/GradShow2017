@@ -60,8 +60,6 @@ $(window).on("load", function() {
    });
 
    $(".student").on("click", function() {
-      console.log("clicky student");
-
       $("#student-box").removeClass("dn").addClass("flex");
       $("#student-dim").removeClass("dn");
    });
@@ -95,10 +93,16 @@ $(window).on("load", function() {
             $("#" + student + " img:first-child").addClass("dn");
             $("#" + student + " img:nth-child(2)").removeClass("dn");
          });
+         $("#close").on("mouseenter", function() {
+            $("#close img").addClass("scale-up");
+         });
 
          $("#" + student).on("mouseleave", function() {
             $("#" + student + " img:first-child").removeClass("dn");
             $("#" + student + " img:nth-child(2)").addClass("dn");
+         });
+         $("#close").on("mouseleave", function() {
+            $("#close img").removeClass("scale-up");
          });
       }
    });
