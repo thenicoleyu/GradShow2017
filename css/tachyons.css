@@ -359,7 +359,8 @@ img { max-width: 100%; }
 .b--yellow { border-color: #ffd700; }
 .b--light-yellow { border-color: #ffc68e; }
 .b--purple { border-color: #6b47ce; }
-.b--light-purple { border-color: #b6a5e7; }
+/*.b--light-purple { border-color: #7a5cd1; }*/
+.b--light-purple { border-color: #7254c8; }
 .b--dark-pink { border-color: #d5008f; }
 .b--hot-pink { border-color: #ff41b4; }
 .b--pink { border-color: #ff80cc; }
