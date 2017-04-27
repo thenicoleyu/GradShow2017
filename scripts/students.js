@@ -169,7 +169,7 @@ var studentTwitter = {
 var studentPortfolio = {
    "ali" : "http://uxdev.ca/",
    "amnon" : "http://www.amnon.rocks/",
-   "ben" : "http://legerbe.dev.fast.sheridanc.on.ca/Portfolio/",
+   "ben" : "http://benleger.com/index.php",
    "chibuzo" : "http://www.chibuzouguru.com/",
    "christy" : "http://www.thesitongwang.com/",
    "daisy" : "http://www.daizistudio.com/",
